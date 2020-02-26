@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1> Registration </h1>
+
+    {{ form_start(form)}}
+    
+    {{ form_row(form.username, {'label' : 'User name', 'attr' : {'placeholder': 'User name...'}})}}
+    {{ form_row(form.email, {'label' : 'Email', 'attr' : {'placeholder': 'Email...'}})}}
+    {{ form_row(form.password, {'label' : 'Password', 'attr' : {'placeholder': 'Password...'}})}}
+    {{ form_row(form.confirm_password, {'label' : 'Confirm password', 'attr' : {'placeholder': 'Confirm password...'}})}}
+    
+            <button type="submit" class="btn btn-success"> Inscription ! </button>
+    {{ form_end(form)}}
+
+{% endblock %}
